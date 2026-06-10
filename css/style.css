@@ -696,7 +696,7 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1.2fr 1.3fr;
+  grid-template-columns: minmax(300px, 1.6fr) minmax(110px, 0.8fr) 1fr 1.2fr;
   gap: 40px
 }
 
@@ -721,9 +721,11 @@ body {
 
 .footer-tag {
   margin: 0 0 24px;
-  line-height: 1.75;
-  font-size: 0.95rem;
-  max-width: 30ch
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 46ch
 }
 
 .footer-socials {
@@ -1465,6 +1467,35 @@ body {
 .flyer-img {
   width: 100%;
   display: block;
+}
+
+/* Gallery (site progress / renders) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gallery-img-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(61, 43, 0, 0.08);
+  border: 1px solid rgba(61, 43, 0, 0.06);
+  height: 280px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.gallery-img-wrapper:hover .gallery-img {
+  transform: scale(1.05);
 }
 
 .detail-hero {
