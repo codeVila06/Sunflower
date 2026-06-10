@@ -93,6 +93,36 @@
   toggle();
 })();
 
+// Contact form: open WhatsApp with a prefilled message
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+  const WHATSAPP_NUMBER = '2348116628932';
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !message) return;
+
+    const lines = [
+      `Hello Sunflower Parks & Gardens, I'd like to send an enquiry.`,
+      ``,
+      `*Name:* ${name}`,
+      `*Phone:* ${phone}`,
+    ];
+    if (email) lines.push(`*Email:* ${email}`);
+    lines.push(``, `*Message:*`, message);
+
+    const text = encodeURIComponent(lines.join('\n'));
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+  });
+})();
+
 // Scroll reveal for sections: adds `in-view` when elements enter the viewport
 (function () {
   const reveals = Array.from(document.querySelectorAll('.reveal-on-scroll'));

@@ -20,7 +20,6 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="properties.html">Properties</a>
-        <a href="iri.html">ÌRÌ by Sunflower</a>
         <a href="contact.html#book-a-visit" class="active">Book a Site Visit</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
@@ -28,10 +27,12 @@
   </header>
 
   <main class="container content">
-    <div style="text-align: center; margin-bottom: 40px;">
-      <h1 style="font-size: 3rem; margin-bottom: 10px;">Get in <span class="highlight-brand">Touch</span></h1>
-      <p style="color: var(--muted); font-size: 1.1rem;">Have questions about our properties? We'd love to hear from
-        you.</p>
+    <!-- Page Header -->
+    <div class="detail-page-header reveal-on-scroll">
+      <span class="eyebrow"><span class="dot"></span> We'd Love to Hear From You</span>
+      <h1>Get in <span class="highlight-brand">Touch</span></h1>
+      <p class="page-header-sub">Have questions about our properties, or ready to book a site visit? Reach out to
+        our team — we typically respond within a few hours.</p>
     </div>
 
     <div class="contact-grid">
@@ -39,7 +40,7 @@
       <!-- Left Column: Info + Map -->
       <div class="contact-info-col">
         <!-- Info Cards -->
-        <div class="contact-card">
+        <div class="contact-card reveal-on-scroll">
           <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
           <div>
             <h3 style="margin: 0 0 8px; font-size: 1.2rem;">Head Office</h3>
@@ -51,7 +52,7 @@
           </div>
         </div>
 
-        <div class="contact-card">
+        <div class="contact-card reveal-on-scroll">
           <div class="icon"><i class="fa-solid fa-phone"></i></div>
           <div>
             <h3 style="margin: 0 0 8px; font-size: 1.2rem;">Phone Support</h3>
@@ -62,8 +63,21 @@
           </div>
         </div>
 
+        <div class="contact-card contact-card--whatsapp reveal-on-scroll">
+          <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <h3 style="margin: 0 0 8px; font-size: 1.2rem;">Chat on WhatsApp</h3>
+            <p style="margin: 0; color: var(--muted); line-height: 1.6;">
+              Prefer to chat directly? Message our team on WhatsApp for a quick response.
+            </p>
+            <a class="btn primary"
+              href="https://wa.me/2348116628932?text=Hello%20Sunflower%20Parks%20%26%20Gardens%2C%20I%27d%20like%20to%20enquire%20about%20your%20properties."
+              target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Start a Chat</a>
+          </div>
+        </div>
+
         <!-- Google Map Embed -->
-        <div class="map-container">
+        <div class="map-container reveal-on-scroll">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.393603376997!2d3.3353592!3d6.5978736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922896eda973%3A0x6310226227276503!2s28%20Ogunlowo%20St%2C%20Opebi%2C%20Ikeja%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1706149000000!5m2!1sen!2sng"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -79,26 +93,31 @@
       </div>
 
       <!-- Right Column: Form -->
-      <div class="contact-form-col" id="book-a-visit">
-        <h2 style="font-size: 1.8rem; margin-bottom: 24px;">Send Message</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Your name">
+      <div class="contact-form-col reveal-on-scroll" id="book-a-visit">
+        <h2 style="font-size: 1.8rem; margin-bottom: 8px;">Send Message</h2>
+        <p class="form-subtitle">Fill in your details below — submitting opens WhatsApp with your message ready to
+          send to our team.</p>
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="080 123 45678" required>
+            </div>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" class="form-control" placeholder="email@example.com">
           </div>
           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" class="form-control" placeholder="080 123 45678">
-          </div>
-          <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" class="form-control" placeholder="How can we help you today?"></textarea>
+            <textarea id="message" class="form-control" placeholder="How can we help you today?" required></textarea>
           </div>
-          <button type="submit" class="btn primary" style="width: 100%;">Send Message</button>
+          <button type="submit" class="btn primary form-submit-btn"><i class="fa-brands fa-whatsapp"></i> Send via
+            WhatsApp</button>
         </form>
       </div>
 
@@ -115,9 +134,9 @@
             <p class="footer-tag">Creating valuable, family-centred communities through thoughtfully master-planned
               developments.</p>
             <div class="footer-socials">
-              <a href="#" aria-label="X"><i class="fa-solid fa-x"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://x.com/sfpgrealtor?s=21" target="_blank" rel="noopener" aria-label="X"><i class="fa-solid fa-x"></i></a>
+              <a href="https://www.instagram.com/sunflowerparkrealtors" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/sunflower-park-and-gardens-realtor/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
           </div>
 
@@ -127,7 +146,6 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="properties.html">Properties</a></li>
-              <li><a href="iri.html">ÌRÌ by Sunflower</a></li>
               <li><a href="contact.html#book-a-visit">Book a Site Visit</a></li>
             </ul>
           </div>
